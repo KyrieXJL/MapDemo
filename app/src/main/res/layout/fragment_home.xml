@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/windowBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+       android:paddingBottom="@dimen/margin_bigger"
+        android:gravity="center">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <ImageView
+            android:id="@+id/image_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_bigger"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@mipmap/traffic_circle"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="距离比赛时间"
+            android:layout_marginBottom="@dimen/margin_30"
+            app:layout_constraintBottom_toTopOf="@id/image_circle"
+            app:layout_constraintTop_toBottomOf="@id/image_circle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="#ff4b4b"
+            android:textSize="25sp"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_marginRight="@dimen/margin_bigger"
+            android:layout_marginEnd="@dimen/margin_bigger"
+            app:layout_constraintBottom_toTopOf="@id/image_circle"
+            app:layout_constraintTop_toBottomOf="@id/image_circle"
+            app:layout_constraintLeft_toLeftOf="@id/image_circle"
+            app:layout_constraintRight_toRightOf="@id/image_circle" />
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="天"
+            android:textSize="15sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/_income"
+            app:layout_constraintLeft_toLeftOf="@id/image_circle"
+            app:layout_constraintRight_toRightOf="@id/image_circle" />
+    </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/White"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/test_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="今日完成"
+                android:textColor="@color/text_color_big"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/home_day_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/test_day"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="1.72"
+                android:textColor="#ff4b4b"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/home_day_income"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/home_day_income"
+                android:text="%"
+                android:textColor="@color/text_color_small"
+                android:textSize="15sp"
+                android:layout_toEndOf="@+id/home_day_income"
+                android:layout_marginStart="1dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/grey_line" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/test_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="今年完成"
+                android:textColor="@color/text_color_big"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/home_year_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/test_year"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="72.0"
+                android:textColor="#ff4b4b"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/home_year_income"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/home_year_income"
+                android:text="%"
+                android:textColor="@color/text_color_small"
+                android:textSize="15sp"
+                android:layout_marginStart="1dp"
+                android:layout_toEndOf="@+id/home_year_income" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:background="@color/bg_theme" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/White"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/home_convert_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="80"
+                android:textColor="@color/text_color_big"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/home_convert_percent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/home_convert_percent"
+                android:text="%"
+                android:textColor="@color/text_color_small"
+                android:textSize="@dimen/text_size_smaller"
+                android:layout_marginStart="1dp"
+                android:layout_toEndOf="@+id/home_convert_percent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_convert_percent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="转换率"
+                android:textColor="@color/text_color_small"
+                android:textSize="@dimen/text_size_smaller" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/grey_line" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/home_use_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="80"
+                android:textColor="@color/text_color_big"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/home_use_percent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/home_use_percent"
+                android:text="%"
+                android:textColor="@color/text_color_small"
+                android:textSize="@dimen/text_size_smaller"
+                android:layout_marginStart="1dp"
+                android:layout_toEndOf="@+id/home_use_percent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_use_percent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="利用率"
+                android:textColor="@color/text_color_small"
+                android:textSize="@dimen/text_size_smaller" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/grey_line" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/home_online_park"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="80"
+                android:textColor="@color/text_color_big"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/home_online_park"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/home_online_park"
+                android:text="课"
+                android:textColor="@color/text_color_small"
+                android:textSize="@dimen/text_size_smaller"
+                android:layout_marginStart="1dp"
+                android:layout_toEndOf="@+id/home_online_park" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_online_park"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="总课时量"
+                android:textColor="@color/text_color_small"
+                android:textSize="@dimen/text_size_smaller" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/grey_line" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/home_offline_park"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="80"
+                android:textColor="@color/text_color_big"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/home_offline_park"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/home_offline_park"
+                android:text="课"
+                android:textColor="@color/text_color_small"
+                android:textSize="@dimen/text_size_smaller"
+                android:layout_marginStart="1dp"
+                android:layout_toEndOf="@+id/home_offline_park" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_offline_park"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="每天课时量"
+                android:textColor="@color/text_color_small"
+                android:textSize="@dimen/text_size_smaller" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:background="@color/bg_theme" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/White"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/home_operation_center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/home_oc_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/home_oc"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:layout_toRightOf="@+id/home_oc_image"
+                    android:text="运营中心"
+                    android:layout_marginStart="@dimen/margin_big"
+                    android:layout_toEndOf="@+id/home_oc_image" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/grey_line" />
+
+        <RelativeLayout
+            android:id="@+id/home_consume_center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/home_cc_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/home_cc"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:layout_toRightOf="@+id/home_cc_image"
+                    android:text="消费中心"
+                    android:layout_marginStart="@dimen/margin_big"
+                    android:layout_toEndOf="@+id/home_cc_image" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/White"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:id="@+id/home_manager_center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/home_mc_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/home_mc"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:layout_toRightOf="@+id/home_mc_image"
+                    android:text="管理中心"
+                    android:layout_marginStart="@dimen/margin_big"
+                    android:layout_toEndOf="@+id/home_mc_image" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@color/grey_line" />
+
+        <RelativeLayout
+            android:id="@+id/home_data_center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/home_dc_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/home_dc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:layout_toRightOf="@+id/home_dc_image"
+                    android:layout_marginStart="@dimen/margin_big"
+                    android:layout_toEndOf="@+id/home_dc_image"
+                    android:text="数据中心" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
